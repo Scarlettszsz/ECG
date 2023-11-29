@@ -44,6 +44,7 @@
     --dark--border--gray--60: rgba(158, 158, 158, 0.6);
     --dark--border--gray--30: rgba(158, 158, 158, 0.3);
     --dark--border--gray--20: #27292D;
+    --dark--border--red-100: #D32F2F;
 }
 
 * {
@@ -428,7 +429,8 @@ button:focus {
 /* btn-red */
 .btn-red {
     background: var(--dark--bg--red--100);
-    border: 1px solid var(--dark--bg--red--100);;
+    border: 1px solid var(--dark--bg--red--100);
+    ;
     color: var(--dark--text--write--100);
 }
 
@@ -725,78 +727,77 @@ h3.title {
  * input
  * **************************************** */
 /* input text */
-.ss-input-wrap {
+.input-wrap {
     display: flex;
     gap: 20px;
 }
 
-.ss-input-group {
+.input-group {
     display: flex;
     flex-direction: column;
 }
 
-.ss-input-group label {
-    color: #5C5D62;
+.input-group label {
+    color: var(--dark--text--write--70);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0 0 12px 0;
     text-align: left;
 }
 
-.ss-input-group input[type=text],
-.ss-input-group input[type=password] {
-    background: #fff;
-    border: 1px solid #D0D1D8;
+.input-group input[type=text],
+.input-group input[type=password] {
+    background: none;
+    border: 1px solid var(--dark--border--gray--30);
     border-radius: 6px;
     color: #191A1C;
     font-size: 14px;
     font-weight: 400;
-    height: 32px;
+    height: 46px;
     padding: 0 16px;
     transition: all .5s;
 }
 
-.ss-input-group input[type=text]::placeholder,
-.ss-input-group input[type=password]::placeholder {
+.input-group input[type=text]::placeholder,
+.input-group input[type=password]::placeholder {
     color: #B0B0B7;
 }
 
-.ss-input-group input[type=text]:hover,
-.ss-input-group input[type=password]:hover {
-    border: 1px solid #3B5AAB;
+.input-group input[type=text]:hover,
+.input-group input[type=password]:hover {
+    border: 1px solid var(--dark--border--gray--60);
     transition: border-color 0.3s ease;
 }
 
-.ss-input-group input[type=text]:focus,
-.ss-input-group input[type=password]:focus {
-    border: 1px solid #3B5AAB;
-    box-shadow: 0 0 0 2px #3B5AAB;
-    transition: box-shadow 0.3s ease;
-}
-
-.ss-input-group input[type=text]:disabled,
-.ss-input-group input[type=password]:disabled {
-    background: #EBEBF1;
-    border: 1px solid #D0D1D8;
-    color: #B0B0B7;
-}
-
-.ss-input-group.error input[type=text],
-.ss-input-group.error input[type=password] {
-    border: 1px solid #EF7068;
-}
-
-.ss-input-group.error input[type=text]:hover,
-.ss-input-group.error input[type=text]:focus,
-.ss-input-group.error input[type=password]:hover,
-.ss-input-group.error input[type=password]:focus {
-    border: 1px solid #EF7068;
+.input-group input[type=text]:focus,
+.input-group input[type=password]:focus {
+    border: 1px solid var(--dark--border--gray--60);
     box-shadow: none;
 }
 
-.ss-input-group.error .error-msg {
-    color: #EF7068;
-    font-size: 12px;
+.input-group input[type=text]:disabled,
+.input-group input[type=password]:disabled {
+    background: var(--dark--bg--disabled);
+    border: 1px solid var(--dark--border--gray--60);
+    color: var(--dark--text--write--30)
+}
+
+.input-group.error input[type=text],
+.input-group.error input[type=password] {
+    border: 1px solid var(--dark--border--red-100);
+}
+
+.input-group.error input[type=text]:hover,
+.input-group.error input[type=text]:focus,
+.input-group.error input[type=password]:hover,
+.input-group.error input[type=password]:focus {
+    border: 1px solid var(--dark--border--red-100);
+    box-shadow: none;
+}
+
+.input-group.error .error-msg {
+    color: var(--dark--bg--red--100);
+    font-size: 13px;
     font-weight: 400;
     margin: 4px 0 0 0;
 }
@@ -968,7 +969,7 @@ h3.title {
 .radio-group label {
     align-items: center;
     cursor: pointer;
-    color: #000;
+    color: var(--dark--text--write--70);
     font-size: 14px;
     font-weight: 500;
     display: flex;
@@ -987,28 +988,36 @@ h3.title {
 .radio-group input[type=radio]:hover+label::before,
 .radio-group input[type=radio]:focus+label::before {
     border-radius: 100px;
-    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #3B5AAB;
-    transition: box-shadow 0.3s ease;
+    box-shadow: none;
+    transition: all 0.3s ease;
 }
 
 .radio-group input:checked+label::before {
     background: url(../img/ico/i-radio-checked.png);
     background-size: cover;
+    transition: all 0.3s ease;
 }
 
 .radio-group input:disabled+label::before {
     background: url(../img/ico/i-radio-disabled.png);
     background-size: cover;
+    transition: all 0.3s ease;
 }
 
 .radio-group input:checked:disabled+label::before {
     background: url(../img/ico/i-radio-checked-disabled.png);
     background-size: cover;
+    transition: all 0.3s ease;
 }
 
 .radio-group input:checked:hover+label::before,
 .radio-group input:disabled:hover+label::before {
     box-shadow: none;
+}
+
+.radio-group input:checked+label {
+    color: var(--dark--text--write--100);
+    transition: all 0.3s ease;
 }
 
 /* textarea */
@@ -1074,15 +1083,15 @@ h3.title {
 }
 
 .date-group input[type=date] {
-    background: #fff;
-    border: 1px solid #D0D1D8;
+    background: none;
+    border: 1px solid var(--dark--border--gray--30);
     border-radius: 6px;
-    color: #000;
+    color: var(--dark--text--write--30);
     cursor: pointer;
     font-size: 14px;
     font-weight: 400;
     justify-content: flex-start;
-    height: 32px;
+    height: 46px;
     padding: 0 12px 0 16px;
     position: relative;
     transition: all .5s;
@@ -1101,14 +1110,13 @@ h3.title {
 }
 
 .date-group input[type=date]:hover {
-    border: 1px solid #3B5AAB;
+    border: 1px solid var(--dark--border--gray--60);
     transition: all .5s;
 }
 
 .date-group input[type=date]:focus {
-    border: 1px solid #3B5AAB;
-    box-shadow: 0 0 0 2px #3B5AAB;
-    transition: box-shadow .5s;
+    border: 1px solid var(--dark--border--gray--60);
+    box-shadow: none;
 }
 
 /* input file */
@@ -1634,6 +1642,7 @@ h3.title {
 .pagination.type2 li.middle {
     margin: 0 8px;
 }
+
 /* **************************************** *
  * depth
  * **************************************** */
