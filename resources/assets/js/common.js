@@ -32,7 +32,7 @@ $(document).ready(function () {
                 <ul class="header-ico">
                     <li>
                         <a href="">
-                            <i class="ico i-user-admin"></i>
+                            <i class="ico i-gear"></i>
                         </a>
                     </li>
                     <li>
@@ -50,6 +50,15 @@ $(document).ready(function () {
     <p>Version 0.0.1</p>
     `;
   }
+
+  // accordion
+  $('.accordion-header').click(function() {
+    const accordionItem = $(this).parent('.accordion-item');
+    const accordionContent = accordionItem.find('.accordion-content');
+
+    // 콘텐츠의 가시성을 토글합니다
+    accordionContent.slideToggle();
+  });
 
   // 모달 열기 버튼 클릭 이벤트
   $(".open-modal").click(function () {
@@ -78,9 +87,5 @@ $(document).ready(function () {
     $(this).toggleClass("active");
   });
 
-  // Data_Analysis
-  $(".control-group").hide();
-  $(".control-list").click(function() {
-    $(".control-group").toggle();
-  })
+
 });

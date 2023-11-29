@@ -29,6 +29,10 @@ ul li {
     text-align: left;
 }
 
+.complete {
+    text-decoration: line-through;
+}
+
 .header {
     align-items: center;
     background: #222;
