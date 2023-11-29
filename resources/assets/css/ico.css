@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+.ico {
+    background-size: cover !important;
+    display: inline-block;
+}
+
+.i-user {
+    background: url(../img/ico/i-user.png);
+    height: 16px;
+    width: 16px;
+}
+
+.i-clock {
+    background: url(../img/ico/i-clock.png);
+    height: 16px;
+    width: 16px;
+}
+
+.i-arrow-down {
+    background: url(../img/ico/i-arrow-down.png);
+    height: 16px;
+    width: 16px;
+}
+
+.i-user-admin {
+    background: url(../img/ico/i-user-admin.png);
+    height: 24px;
+    width: 24px;
+}
+
+.i-logout {
+    background: url(../img/ico/i-logout.png);
+    height: 24px;
+    width: 24px;
+}
+
+.i-new-window {
+    background: url(../img/ico/i-new-window.png);
+    height: 16px;
+    width: 16px;
+}
+
+.i-arrow-left {
+    background: url(../img/ico/i-arrow-left.png);
+    height: 16px;
+    width: 16px;
+}
+
+.i-arrow-right {
+    background: url(../img/ico/i-arrow-right.png);
+    height: 16px;
+    width: 16px;
+}
+
+.i-list {
+    background: url(../img/ico/i-list.png);
+    height: 24px;
+    width: 24px;
+}
+
+.i-home {
+    background: url(../img/ico/i-home.png);
+    height: 16px;
+    width: 16px;
+}
+
+.i-chevron-right {
+    background: url(../img/ico/i-chevron-right.png);
+    height: 10px;
+    width: 10px;
+}
+
+.i-arrow-double-left {
+    background: url(../img/ico/i-arrow-double-left.png);
+    height: 28px;
+    width: 28px;
+}
+
+.i-arrow-double-right {
+    background: url(../img/ico/i-arrow-double-right.png);
+    height: 28px;
+    width: 28px;
+}

@@ -1,0 +1,198 @@
+@charset "utf-8";
+@import url(common.css);
+@import url(ico.css);
+
+
+/*
+ * File       : styles.css
+ * Date       : 2023. 11. 28.
+ *
+ */
+
+/* **************************************** *
+ * 7. Data Analysis
+ * **************************************** */
+
+.chart-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chart-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chart-title {
+    align-items: center;
+    color: var(--dark--text--write--100);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 6px;
+}
+
+.chart-title a {
+    align-items: center;
+    display: flex;
+}
+
+.data-analysis-chart {
+    height: calc(100vh - 242px);
+    padding: 0 8px 0 0;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.control-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-title {
+    color: var(--dark--text--write--100);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.control-group button {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.cont-body .col-3 {
+    position: relative;
+}
+
+.control-list {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+/* **************************************** *
+ * 8. Class Analysis
+ * **************************************** */
+.chart-top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart-top .left {
+    width: auto;
+}
+
+.chart-top .right {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.chart-top button {
+    width: 100px;
+}
+
+.class-analysis-wrap>.row {
+    align-items: flex-end;
+}
+
+/* **************************************** *
+ * 9. Full Disclosure Analysis
+ * **************************************** */
+.full-disclosure-analysis .check-group {
+    width: calc((100% - 20px)/2);
+}
+
+/* **************************************** *
+ * 10. Report
+ * **************************************** */
+.report-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.report-top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    line-height: 36px;
+}
+
+.report-title {
+    align-items: center;
+    color: var(--dark--text--write--100);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    gap: 6px;
+}
+
+.report-wrap .list {
+    list-style: disc;
+    padding: 0 0 0 20px;
+}
+
+.report-wrap .list li {
+    font-size: 14px;
+    font-weight: 400;
+    list-style: disc;
+    margin: 0 0 4px 0;
+}
+
+.report-wrap .check-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 4px;
+    margin: 8px 0 16px 0;
+}
+
+.report-wrap .check-group,
+.report-wrap label {
+    width: 100%;
+}
+
+.report-top button {
+    min-width: 80px;
+    width: auto;
+}
+
+.report-preview {
+    background: var(--dark--bg--gray--50);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 296px);
+    gap: 20px;
+    padding: 20px;
+}
+
+.report-preview .pagination {
+    margin: auto 0 0 0;
+}
+
+.event-check-wrap {
+    max-height: 316px;
+    padding: 0 8px 0 0;
+}
+
+.highlight {
+    background: var(--dark--bg--yellow--100);
+    height: 20px;
+    margin: 0 0 0 auto;
+    width: 100px;
+}
+
+.report-wrap .input-group {
+    margin: 8px 0 0 0;
+}
