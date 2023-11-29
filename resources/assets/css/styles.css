@@ -70,9 +70,14 @@
     font-weight: 400;
 }
 
+.control-group .select-group select {
+    height: 32px;
+}
+
 .control-group button {
     font-size: 14px;
     font-weight: 400;
+    height: 32px;
 }
 
 .cont-body .col-3 {
