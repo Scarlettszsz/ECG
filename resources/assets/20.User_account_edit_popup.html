@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account Edit</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="popup-container">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h1 class="popup-title">User Account Edit</h1>
+                <i class="ico i-x popup-close" onclick="window.close()"></i>
+            </div>
+            <div class="popup-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group search input-row">
+                            <h6>Name<span>*</span></h6>
+                            <div class="input-area">
+                                <input type="text" id="text01" placeholder="Scarlett">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div class="input-group search input-row">
+                            <h6>Phone Number<span>*</span></h6>
+                            <div class="input-area">
+                                <input type="text" id="text01" placeholder="043-715-2498">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div class="input-group search input-row">
+                            <h6>Email<span>*</span></h6>
+                            <div class="input-area">
+                                <input type="text" id="text01" placeholder="abc@gmail.com">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-r btn-sm btn-outline-gray"
+                        onclick="window.close()">Cancel</button>
+                    <button type="button" class="btn btn-r btn-sm btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-container">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h1 class="popup-title">Electronic Signature</h1>
+                <i class="ico i-x popup-close" onclick="window.close()"></i>
+            </div>
+            <div class="popup-body">
+                <div class="input-wrap">
+                    <div class="input-group">
+                        <h6>Electronic Signature<span>*</span></h6>
+                        <div class="file-group">
+                            <input type="text" id="uploadFileText" placeholder="Electronic Signature" disabled>
+                            <input type="file" id="fileupload" />
+                            <label for="fileupload">Upload</label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <h6>Electronic Signature Password<span>*</span></h6>
+                        <div class="input-area">
+                            <input type="password" id="text01" placeholder="Electronic Signature Password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-r btn-sm btn-outline-gray"
+                        onclick="window.close()">Cancel</button>
+                    <button type="button" class="btn btn-r btn-sm btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

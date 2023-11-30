@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolmesAI</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header" id="header"></header>
+
+        <section class="content">
+            <div class="cont-area">
+                <div class="cont-top">
+                    <h1 class="title">Patient List</h1>
+                    <div class="depth-group">
+                        <ul>
+                            <li><a href="#"><i class="ico i-home"></i></a></li>
+                            <li><i class="ico i-chevron-right"></i></li>
+                            <li><a href="#">Patient List</a></li>
+                            <li><i class="ico i-chevron-right"></i></li>
+                            <li><a href="#">Analysis</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <div class="table-top">
+                        <p class="total">총 <span>497</span>건</p>
+                        <div class="date-group ml-auto">
+                            <!-- <h2>날짜</h2> -->
+                            <div class="date-wrap">
+                                <input type="date" placeholder="시작일">
+                                <span>~</span>
+                                <input type="date" placeholder="시작일">
+                            </div>
+                        </div>
+                        <div class="input-search-area">
+                            <div class="select-group type2">
+                                <select name="" id="">
+                                    <option value="">All</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            </div>
+                            <div class="input-search">
+                                <input type="text" placeholder="search">
+                                <button type="button">
+                                    <i class="ico i-search"></i>
+                                </button>
+                            </div>
+                            <div class="select-group type2">
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-md btn-primary">New Patient</button>
+                            <button type="button" class="btn btn-md btn-red">Stop Inspection</button>
+                            <button type="button" class="btn btn-md btn-gray">Patient Edit</button>
+                        </div>
+                    </div>
+                    <div class="table-body">
+                        <table class="basic-table">
+                            <colgroup>
+                                <col style="width: 44px;">
+                                <col style="width: 60px;">
+                                <col style="width: auto;">
+                                <col style="width: 120px;">
+                                <col style="width: auto;">
+                                <col style="width: auto;">
+                                <col style="width: 100px;">
+                                <col style="width: 160px;">
+                                <col style="width: 160px;">
+                                <col style="width: auto;">
+                                <col style="width: 104px;">
+                                <col style="width: 104px;">
+                                <col style="width: 104px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chkAll">
+                                            <label for="chkAll"></label>
+                                        </div>
+                                    </th>
+                                    <th>No.</th>
+                                    <th>Name</th>
+                                    <th>Date of Birth</th>
+                                    <th>Patiend ID</th>
+                                    <th>Serial Number</th>
+                                    <th>Duration</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <th>Status</th>
+                                    <th>Note</th>
+                                    <th>Result</th>
+                                    <th>Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-recording"></i>
+                                            Recording
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk02" name="chk">
+                                            <label for="chk02"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-paired"></i>
+                                            Paired
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk03" name="chk">
+                                            <label for="chk03"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-monitoring"></i>
+                                            Monitoring
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk04" name="chk">
+                                            <label for="chk04"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-holmes-analyzing"></i>
+                                            Holmes Analyzing
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk05" name="chk">
+                                            <label for="chk05"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-holmes-analyzed"></i>
+                                            Holmes Analyzed
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk06" name="chk">
+                                            <label for="chk06"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-pending-signature"></i>
+                                            Pending Signature
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk07" name="chk">
+                                            <label for="chk07"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-signed-off"></i>
+                                            Signed Off
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk08" name="chk">
+                                            <label for="chk08"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-error"></i>
+                                            Error
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk09" name="chk">
+                                            <label for="chk09"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-recording"></i>
+                                            Recording
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk10" name="chk">
+                                            <label for="chk10"></label>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td class="ta-l">Mark</td>
+                                    <td>1999-01-01</td>
+                                    <td>AC1234</td>
+                                    <td>AD14312</td>
+                                    <td>23H 24M</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>2023-09-06 04:22</td>
+                                    <td>
+                                        <div class="status-area">
+                                            <i class="ico i-recording"></i>
+                                            Recording
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Note</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Result</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-mini btn-outline-gray">Detail</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-bottom">
+                        <div class="pagination">
+                            <ul>
+                                <li class="prev"><a href=""><i class="ico i-arrow-double-left"></i></a></li>
+                                <li class="prev"><a href=""><i class="ico i-arrow-left"></i></a></li>
+                                <li class="active"><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li class="next"><a href=""><i class="ico i-arrow-right"></i></a></li>
+                                </li>
+                                <li class="next"><a href=""><i class="ico i-arrow-double-right"></i></a></li>
+                                </li>
+                            </ul>
+                            <div class="pagination-num">
+                                <div class="input-group">
+                                    <input type="text">
+                                </div>
+                                <span>of 1,000 articles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer" id="footer"></div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

@@ -64,12 +64,71 @@
                         <tr>
                             <td>
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-primary open-modal"
-                                        data-modal-id="confirmModal">confirmModal</button>
-                                    <button type="button" class="btn btn-sm btn-primary open-modal"
-                                        data-modal-id="contentModal">contentModal</button>
-                                    <button type="button" class="btn btn-sm btn-primary open-modal"
-                                        data-modal-id="fullScreenModal">fullScreenModal</button>
+                                    <!-- 회원가입 후 승인요청 경고 -->
+                                    <button type="button" class="btn btn-lg btn-primary open-modal"
+                                        data-modal-id="alertModal">alertModal</button>
+                                    <!-- 검사중지사유 -->
+                                    <button type="button" class="btn btn-lg btn-primary open-modal"
+                                        data-modal-id="waringModal">waringModal</button>
+                                    <!-- 데이터 업로드-->
+                                    <button type="button" class="btn btn-lg btn-primary open-modal"
+                                        data-modal-id="uploadModal">uploadModal</button>
+                                    <!-- Add to Report-->
+                                    <button type="button" class="btn btn-lg btn-primary open-modal"
+                                        data-modal-id="addToReportModal">addToReportModal</button>
+                                    <!-- 전자서명 -->
+                                    <button type="button" class="btn btn-lg btn-primary open-modal"
+                                        data-modal-id="electronicSignModal">electronicSignModal</button>
+
+                                    <!-- 비밀번호 변경 -->
+                                    <button type="button" class="btn btn-lg btn-primary open-modal"
+                                        data-modal-id="changingPasswordModal">changingPasswordModal</button>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>POPUP</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="btn-group">
+                                    <!-- 회원가입 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="joinPopup()">joinPopup</button>
+                                    <!-- 신규환자등록 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="patiendRegistrationPopup()">patiendRegistrationPopup</button>
+                                    <!-- Note 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="notePopup()">notePopup</button>
+                                    <!-- Detail 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="detailPopup()">detailPopup</button>
+
+                                    <!-- 공통코드편집 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="commonCodeAddPopup()">commonCodeAddPopup</button>
+                                    <!-- 공지사항 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="noticePopup()">noticePopup</button>
+
+                                    <!-- 분석기관 검색 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="institutionSearchPopup()">institutionSearchPopup</button>
+                                    <!-- Result 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="resultPopup()">resultPopup</button>
+                                    <!-- 사용자프로필수정 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="userAccountEditPopup()">userAccountEditPopup</button>
+                                    <!-- 하위기관 관리 추가 팝업 -->
+                                    <button type="button" class="btn btn-lg btn-primary"
+                                        onclick="hospitalAddPopup()">hospitalAddPopup</button>
                                 </div>
                             </td>
                         </tr>
@@ -207,6 +266,36 @@
                 <table>
                     <tbody>
                         <tr>
+                            <td>Input(Time)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="time-group">
+                                    <input type="time">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Input(search)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input-group search">
+                                    <h6>Title</h6>
+                                    <input type="text" id="text01" placeholder="Placeholder">
+                                    <button type="button">버튼명</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
                             <td>input(textarea)</td>
                         </tr>
                         <tr>
@@ -217,17 +306,34 @@
                                 </div>
                             </td>
                         </tr>
-                        <!-- 
+
                         <tr>
                             <td class="pt-4">
-                                <div class="file-group">
-                                    <h2>파일첨부</h2>
-                                    <label for="fileupload">버튼명</label>
-                                    <input type="file" id="fileupload" />
-                                    <span>* 반드시 양식 파일을 이용해 주세요.</span>
+                                <div class="input-group input-row text-upload-group">
+                                    <input type="text" id="textUpload" placeholder="Code Value">
+                                    <button type="button" class="btn btn-ou">Add</button>
                                 </div>
                             </td>
-                        </tr> -->
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>input(toggle)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="toggle-container">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" class="toggle-input">
+                                        <div class="toggle-slider">
+                                            <div class="toggle-circle"></div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 <table>
@@ -259,17 +365,16 @@
                                 </div>
                             </td>
                         </tr>
-                        <!-- 
+
                         <tr>
                             <td class="pt-4">
                                 <div class="file-group">
-                                    <h2>파일첨부</h2>
-                                    <label for="fileupload">버튼명</label>
+                                    <input type="text" id="uploadFileText">
                                     <input type="file" id="fileupload" />
-                                    <span>* 반드시 양식 파일을 이용해 주세요.</span>
+                                    <label for="fileupload">Upload</label>
                                 </div>
                             </td>
-                        </tr> -->
+                        </tr>
                     </tbody>
                 </table>
                 <table>
@@ -368,7 +473,7 @@
                                 <div class="ss-card-wrap">
                                     <div class="card">
                                         dd
-                                </div>
+                                    </div>
                             </td>
                         </tr>
                     </tbody>
@@ -432,6 +537,19 @@
                                 </div>
                             </td>
                         </tr>
+
+                        <tr>
+                            <td>
+                                <div class="pagination type3">
+                                    <ul>
+                                        <li class="prev"><a href=""><i class="ico i-arrow-left"></i></a></li>
+                                        <li class="middle"><input type="text"><span>/10</span></li>
+                                        <li class="next"><a href=""><i class="ico i-arrow-right"></i></a></li>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
 
@@ -445,7 +563,7 @@
                             <td>
                                 <ul class="tab-group">
                                     <li>
-                                        <a href="#">Data Analysis</a>
+                                        <a href="#">Reception History</a>
                                     </li>
                                     <li>
                                         <a href="#">Class Analysis</a>
@@ -463,70 +581,347 @@
                     </tbody>
                 </table>
 
+                <table id="accordion">
+                    <tbody>
+                        <tr>
+                            <td>accordion</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">섹션 1</div>
+                                        <div class="accordion-content">
+                                            <p>섹션 1의 내용이 여기에 들어갑니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">섹션 2</div>
+                                        <div class="accordion-content">
+                                            <p>섹션 2의 내용이 여기에 들어갑니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
             </section>
         </section>
     </div>
 
-    <!-- S:confirmModal -->
-    <div id="confirmModal" class="ss-modal-wrap confirm-modal">
-        <div class="ss-modal-content">
-            <div class="ss-modal-body">
-                <p>저장하시겠습니까?</p>
-            </div>
-            <div class="ss-modal-footer">
-                <div class="ss-btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-gray btn-modal-close">취소</button>
-                    <button type="button" class="btn btn-sm btn-primary">확인</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- E:confirmModal -->
-
-    <!-- S:contentModal -->
-    <div id="contentModal" class="ss-modal-wrap content-modal">
-        <div class="ss-modal-inner">
-            <div class="ss-modal-content">
-                <div class="ss-modal-header">
-                    <h3 class="ss-modal-title">비밀번호 재설정</h3>
+    <!-- S:alertModal -->
+    <div id="alertModal" class="modal-wrap alert-modal">
+        <div class="modal-inner">
+            <div class="modal-content modal-sm">
+                <div class="modal-header">
+                    <h3 class="modal-title">Alert</h3>
                     <button type="button" class="btn-modal-close">
-                        <i class="ico i-modal-close"></i>
+                        <i class="ico i-x"></i>
                     </button>
                 </div>
-                <div class="ss-modal-body">
-                    <p>저장하시겠습니까?</p>
+                <div class="modal-body">
+                    <p>Your account has been created!!</p>
                 </div>
-                <div class="ss-modal-footer">
-                    <div class="ss-btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-gray btn-modal-close">취소</button>
-                        <button type="button" class="btn btn-sm btn-primary">확인</button>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-r btn-sm btn-primary btn-modal-close">Close</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- E:contentModal -->
+    <!-- E:alertModal -->
 
-    <!-- S:fullScreenModal -->
-    <div id="fullScreenModal" class="ss-modal-wrap full-screen-modal">
-        <div class="ss-modal-inner">
-            <div class="ss-modal-content">
-                <div class="ss-modal-header">
-                    <h3 class="ss-modal-title">비밀번호 재설정</h3>
+
+    <!-- S:waringModal -->
+    <div id="waringModal" class="modal-wrap alert-modal">
+        <div class="modal-inner">
+            <div class="modal-content modal-md">
+                <div class="modal-header">
+                    <h3 class="modal-title">Warning</h3>
                     <button type="button" class="btn-modal-close">
-                        <i class="ico i-modal-close"></i>
+                        <i class="ico i-x"></i>
                     </button>
                 </div>
-                <div class="ss-modal-body">
-                    <p>저장하시겠습니까?</p>
+                <div class="modal-body">
+                    <p>Are you sure you want to stop inspection?</p>
+                    <div class="warning-wrap">
+                        <i class="ico i-warning"></i>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group input-row">
+                                    <h6>PatientID</h6>
+                                    <p class="text">FC9147</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group input-row">
+                                    <h6>Name</h6>
+                                    <p class="text">Larry</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group input-row">
+                                    <h6>Serial number</h6>
+                                    <p class="text">AF14367</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group input-row">
+                                    <h6>Status</h6>
+                                    <p class="text">Complete</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="ss-modal-footer">
-                    푸터
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-r btn-sm btn-outline-gray btn-modal-close">Cancel</button>
+                        <button type="button" class="btn btn-r btn-sm btn-primary">Yes</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- E:fullScreenModal -->
+    <!-- E:waringModal -->
+
+    <!-- S:uploadModal -->
+    <div id="uploadModal" class="modal-wrap alert-modal">
+        <div class="modal-inner">
+            <div class="modal-content modal-sm">
+                <div class="modal-header">
+                    <h3 class="modal-title">Data Upload</h3>
+                    <button type="button" class="btn-modal-close">
+                        <i class="ico i-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <i class="ico i-upload"></i>
+                    <p class="mt-3">Double-click here or drag the file.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-r btn-sm btn-outline-gray btn-modal-close">Cancel</button>
+                        <button type="button" class="btn btn-r btn-sm btn-primary btn-modal-close">Upload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E:uploadModal -->
+
+    <!-- S:addToReportModal -->
+    <div id="addToReportModal" class="modal-wrap alert-modal">
+        <div class="modal-inner">
+            <div class="modal-content modal-md">
+                <div class="modal-header">
+                    <h3 class="modal-title">Add to Report</h3>
+                    <button type="button" class="btn-modal-close">
+                        <i class="ico i-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row yg-8">
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk01" checked>
+                                <label for="chk01">Sinus Tarchycardia</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">Ventricular Tachycardia</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">Sinus Bradycardia</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">PVC Isolated</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">Sinus Pause</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">PVC Couplet</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">Atrial Filbrillation</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">PVC Bigeminy</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">Atrial Flutter</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">PVC Trigeminy</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">PAC Isolated</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">1° AVB</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">PAC Couplet</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">2° AVB (Mobitz I)</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">PAC Triplet</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">2° AVB (Mobitz II)</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">PAC Bigeminy</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">3° AVB</label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="check-group">
+                                <input type="checkbox" id="chk">
+                                <label for="chk">PAC Trigeminy</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-r btn-sm btn-outline-gray btn-modal-close">Cancel</button>
+                        <button type="button" class="btn btn-r btn-sm btn-primary btn-modal-close">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E:addToReportModal -->
+
+    <!-- S:electronicSignModal -->
+    <div id="electronicSignModal" class="modal-wrap alert-modal">
+        <div class="modal-inner">
+            <div class="modal-content modal-md">
+                <div class="modal-header">
+                    <h3 class="modal-title">Electronic signature</h3>
+                    <button type="button" class="btn-modal-close">
+                        <i class="ico i-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Please enter the secondary password for electronic signature.</p>
+                    <div class="input-group mt-5">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-r btn-sm btn-outline-gray btn-modal-close">Cancel</button>
+                        <button type="button" class="btn btn-r btn-sm btn-primary btn-modal-close">Signature</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E:electronicSignModal -->
+
+    <!-- S:changingPasswordModal -->
+    <div id="changingPasswordModal" class="modal-wrap changing-password-modal">
+        <div class="modal-inner">
+            <div class="modal-content modal-lg">
+                <div class="modal-header">
+                    <h3 class="modal-title">Electronic signature</h3>
+                    <button type="button" class="btn-modal-close">
+                        <i class="ico i-x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>You must change your password<br>
+                        the first time you login.</p>
+                    <div class="input-wrap">
+                        <div class="input-group input-row h-auto">
+                            <h6>Password<span>*</span></h6>
+                            <div class="input-area column g-8">
+                                <input type="password" id="text04" placeholder="Please write">
+                                <p class="info-msg">Password must be between 8 and 20 characters and contain 
+                                    uppercase letter, lowercase letter, number and special characters.</p>
+                            </div>
+                        </div>
+                        <div class="input-group input-row error h-auto">
+                            <h6>Confirm Password<span>*</span></h6>
+                            <div class="input-area column g-8">
+                                <input type="password" id="text04" placeholder="Please write">
+                                <p class="error-msg">The password did not match the re-entered password.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-r btn-sm btn-primary btn-modal-close">Change</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E:changingPasswordModal -->
+
+
 
 
 

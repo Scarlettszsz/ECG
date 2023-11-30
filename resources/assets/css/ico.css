@@ -94,3 +94,93 @@
     height: 24px;
     width: 24px;
 }
+
+.i-x {
+    background: url(../img/ico/i-x.png);
+    height: 24px;
+    width: 24px;
+}
+
+.i-search {
+    background: url(../img/ico/i-search.png);
+    height: 16px;
+    width: 16px;
+}
+
+.i-recording {
+    background: url(../img/ico/i-recording.png);
+    height: 14px;
+    width: 14px;
+}
+
+.i-paired {
+    background: url(../img/ico/i-paired.png);
+    height: 14px;
+    width: 14px;
+}
+
+.i-monitoring {
+    background: url(../img/ico/i-monitoring.png);
+    height: 14px;
+    width: 14px;
+}
+
+.i-uploaded {
+    background: url(../img/ico/i-uploaded.png);
+    height: 14px;
+    width: 14px;
+}
+
+.i-holmes-analyzing {
+    background: url(../img/ico/i-holmes-analyzing.png);
+    height: 14px;
+    width: 14px;
+}
+
+.i-holmes-analyzed {
+    background: url(../img/ico/i-holmes-analyzed.png);
+    height: 14px;
+    width: 14px;
+}
+
+.i-pending-signature {
+    background: url(../img/ico/i-pending-signature.png);
+    height: 14px;
+    width: 14px;
+}
+
+.i-signed-off {
+    background: url(../img/ico/i-signed-off.png);
+    height: 14px;
+    width: 14px;
+}
+
+.i-error {
+    background: url(../img/ico/i-error.png);
+    height: 14px;
+    width: 14px;
+}
+
+.i-plus {
+    background: url(../img/ico/i-plus.png);
+    height: 20px;
+    width: 20px;
+}
+
+.i-minus {
+    background: url(../img/ico/i-minus.png);
+    height: 20px;
+    width: 20px;
+}
+
+.i-warning {
+    background: url(../img/ico/i-warning.png);
+    height: 60px;
+    width: 60px;
+}
+
+.i-upload {
+    background: url(../img/ico/i-upload.png);
+    height: 60px;
+    width: 60px;
+}

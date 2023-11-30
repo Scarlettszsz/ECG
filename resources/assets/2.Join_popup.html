@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="popup-container">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h1 class="popup-title">Create an Account</h1>
+                <i class="ico i-x popup-close" onclick="window.close()"></i>
+            </div>
+            <div class="popup-body">
+                <form action="">
+                    <div class="input-wrap">
+                        <div class="input-group search input-row">
+                            <h6>Institution<span>*</span></h6>
+                            <div class="input-area">
+                                <input type="text" id="text01" placeholder="Please write">
+                                <button type="button">Search</button>
+                            </div>
+                        </div>
+
+                        <div class="input-group search input-row">
+                            <h6>ID<span>*</span></h6>
+                            <div class="input-area">
+                                <input type="text" id="text01" placeholder="Please write">
+                                <button type="button">Check Availability</button>
+                            </div>
+                        </div>
+
+                        <div class="input-group input-row">
+                            <h6>Name<span>*</span></h6>
+                            <div class="input-area">
+                                <input type="text" id="text01" placeholder="Please write">
+                            </div>
+                        </div>
+
+                        <div class="input-group input-row h-auto">
+                            <h6>Password<span>*</span></h6>
+                            <div class="input-area column g-8">
+                                <input type="password" id="text04" placeholder="Please write">
+                                <p class="info-msg">Password must be between 8 and 20 characters and contain 
+                                    uppercase letter, lowercase letter, number and special characters.</p>
+                            </div>
+                        </div>
+
+                        <div class="input-group input-row error h-auto">
+                            <h6>Confirm Password<span>*</span></h6>
+                            <div class="input-area column g-8">
+                                <input type="password" id="text04" placeholder="Please write">
+                                <p class="error-msg">The password did not match the re-entered password.</p>
+                            </div>
+                        </div>
+
+                        <div class="input-group input-row">
+                            <h6>Phone Number<span>*</span></h6>
+                            <div class="input-area">
+                                <input type="text" id="text01" placeholder="Please write">
+                            </div>
+                        </div>
+
+                        <div class="input-group input-row">
+                            <h6>Email<span>*</span></h6>
+                            <div class="input-area">
+                                <input type="text" id="text01" placeholder="Please write">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="popup-footer">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-r btn-sm btn-outline-gray" onclick="window.close()">Cancel</button>
+                    <button type="button" class="btn btn-r btn-sm btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

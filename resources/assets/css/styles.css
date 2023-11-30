@@ -373,3 +373,187 @@
     display: block;
     text-align: center;
 }
+
+/* **************************************** *
+ * 3. Patient List
+ * **************************************** */
+.total {
+    color: var(--dark--text--write--100);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.total span {
+    color: var(--dark--bg--secondary--100);
+    margin: 4px;
+}
+
+.table-wrap .input-search {
+    width: 360px;
+}
+
+.input-search-area {
+    display: flex;
+    gap: 4px;
+}
+
+.table-wrap .select-group select {
+    text-align: left;
+}
+
+.input-search-area .select-group select {
+    min-width: auto;
+    width: 72px;
+}
+
+.table-wrap button {
+    font-size: 13px;
+    padding: 0 20px;
+    width: auto;
+}
+
+.status-area {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+/* **************************************** *
+ * 4.Patiend_registration
+ * **************************************** */
+.popup-body .row {
+    flex-wrap: wrap;
+}
+
+.popup-body .radio-group {
+    height: 46px;
+}
+
+.popup-body .input-group.h-auto {
+    align-items: flex-start;
+    height: auto;
+}
+
+/* **************************************** *
+ * 5.Note
+ * **************************************** */
+.btn-del {
+    align-items: center;
+    background: none;
+    border: 1px solid var(--dark--border--gray--30);
+    border-radius: 4px;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    padding: 0 !important;
+    width: 32px !important;
+}
+
+.btn-del:active,
+.btn-del:focus,
+.btn-del:hover {
+    background: var(--dark--bg--gray--50);
+}
+
+.btn-plus {
+    align-items: center;
+    background: none;
+    border: 1px solid var(--dark--border--gray--30);
+    border-radius: 4px;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    padding: 0 !important;
+    width: 32px !important;
+}
+
+.btn-plus:active,
+.btn-plus:focus,
+.btn-plus:hover {
+    background: var(--dark--bg--gray--50);
+}
+
+/* **************************************** *
+ * 6.Detail
+ * **************************************** */
+.popup-body .cont-body {
+    height: 400px;
+    max-height: 400px;
+}
+
+/* **************************************** *
+ * 17.Common Code Add
+ * **************************************** */
+.text-upload-area {
+    margin: 20px 0 0 0;
+}
+
+/* **************************************** *
+ * 19.Notice
+ * **************************************** */
+.notice-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.notice-top {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.notice-top p {
+    color: var(--dark--text--write--50);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.notice-top .title {
+    margin: 0;
+}
+
+.notice-body {
+    background: var(--dark--bg--gray--50);
+    border: 1px solid var(--dark--border--gray--30);
+    border-radius: 4px;
+    color: var(--dark--text--write--70);
+    font-size: 16px;
+    font-weight: 400;
+    height: 400px;
+    padding: 16px;
+}
+
+/* **************************************** *
+ * Warning Modal
+ * **************************************** */
+.warning-wrap {
+    margin: 20px 0 0 0;
+}
+
+.modal-body .row {
+    flex-wrap: wrap;
+}
+
+.warning-wrap .row {
+    margin: 12px auto 0 auto;
+    max-width: 300px;
+}
+
+.warning-wrap h6 {
+    height: 32px !important;
+}
+
+/* **************************************** *
+ * changingPasswordModal
+ * **************************************** */
+.changing-password-modal .input-wrap {
+    flex-direction: column;
+    margin: 20px 0 0 0;
+}
+
+.modal-body .input-group.h-auto {
+    align-items: flex-start;
+    height: auto;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="popup-container">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h1 class="popup-title">Result</h1>
+                <i class="ico i-x popup-close" onclick="window.close()"></i>
+            </div>
+            <div class="popup-body">
+                <div class="result-wrap" style="background: #ccc; height: 600px;"></div>
+                <div class="pagination type3">
+                    <ul>
+                        <li class="prev"><a href=""><i class="ico i-arrow-left"></i></a></li>
+                        <li class="middle"><input type="text"><span>/10</span></li>
+                        <li class="next"><a href=""><i class="ico i-arrow-right"></i></a></li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-r btn-sm btn-outline-gray"
+                        onclick="window.close()">Cancel</button>
+                    <button type="button" class="btn btn-r btn-sm btn-primary">Export</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
