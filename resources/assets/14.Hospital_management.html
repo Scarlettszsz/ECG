@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolmesAI</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header" id="header"></header>
+
+        <section class="content">
+            <div class="cont-area">
+                <div class="cont-top">
+                    <h1 class="title">Hospital Management List</h1>
+                    <div class="depth-group">
+                        <ul>
+                            <li><a href="#"><i class="ico i-home"></i></a></li>
+                            <li><i class="ico i-chevron-right"></i></li>
+                            <li><a href="#">Hospital Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <div class="table-top">
+                        <div class="date-group ml-auto">
+                            <!-- <h2>날짜</h2> -->
+                            <div class="date-wrap">
+                                <input type="date" placeholder="시작일">
+                                <span>~</span>
+                                <input type="date" placeholder="시작일">
+                            </div>
+                        </div>
+                        <div class="input-search-area">
+                            <div class="input-search">
+                                <input type="text" placeholder="search">
+                                <button type="button">
+                                    <i class="ico i-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-md btn-primary">Add</button>
+                            <button type="button" class="btn btn-md btn-red">Delete</button>
+                        </div>
+                    </div>
+                    <div class="table-body scroll-y h-598">
+                        <table class="basic-table">
+                            <colgroup>
+                                <col style="width: 44px;">
+                                <col style="width: auto;">
+                                <col style="width: auto;">
+                                <col style="width: 120px;">
+                                <col style="width: auto;">
+                                <col style="width: auto;">
+                                <col style="width: auto;">
+                                <col style="width: 100px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chkAll">
+                                            <label for="chkAll"></label>
+                                        </div>
+                                    </th>
+                                    <th>Institution Name</th>
+                                    <th>Address</th>
+                                    <th>Manger Name</th>
+                                    <th>Phone Number (Manager) </th>
+                                    <th>E-Mail (Manager)</th>
+                                    <th>Expiration</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>
+                                        <div class="check-group center">
+                                            <input type="checkbox" id="chk01" name="chk">
+                                            <label for="chk01"></label>
+                                        </div>
+                                    </td>
+                                    <td>Lexiqvolax</td>
+                                    <td class="ta-l">6bis rue Jean Macé 75011 Paris</td>
+                                    <td class="ta-l">Floyd Miles</td>
+                                    <td>(808) 555-0111</td>
+                                    <td class="ta-l">deanna.curtis@example.com</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-gray">Edit</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="footer" id="footer"></div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

@@ -557,3 +557,42 @@
     align-items: flex-start;
     height: auto;
 }
+
+/* **************************************** *
+ * 18.Notice
+ * **************************************** */
+.h-598 {
+    max-height: calc(100vh - 266px);
+}
+
+/* **************************************** *
+ * 16.Common Code
+ * **************************************** */
+.h-210 {
+    max-height: calc(100vh - 210px);
+}
+
+/* **************************************** *
+ * 12.User management
+ * **************************************** */
+.basic-table tbody tr td.blue {
+    color: var(--dark--text--sky--100);
+}
+
+.basic-table tbody tr td.red {
+    color: var(--dark--text--secondary--100);
+}
+
+/* **************************************** *
+ * 11. Admin
+ * **************************************** */
+.card-area {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.card-area .card-box {
+    padding: 40px 20px;
+    width: 100%;
+}

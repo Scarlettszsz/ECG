@@ -1779,7 +1779,7 @@ progress::-webkit-progress-value {
     padding: 0 12px;
 }
 
-.basic-table thead tr td.ta-l {
+.basic-table tbody tr td.ta-l {
     text-align: left;
 }
 
