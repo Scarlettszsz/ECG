@@ -592,7 +592,21 @@
     justify-content: space-between;
 }
 
-.card-area .card-box {
+.card-wrap .card-group {
+    display: flex;
+    gap: 40px;
+}
+
+.card-group .card-box {
+    align-items: center;
+    justify-content: center;
     padding: 40px 20px;
-    width: 100%;
+    width: calc((100% - 120px) / 4)
+}
+
+.card-group .card-box p {
+    color: var(--dark--text--write--70);
+    font-weight: 18px;
+    font-weight: 400;
+    margin: 12px 0 0 0;
 }

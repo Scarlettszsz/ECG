@@ -184,3 +184,45 @@
     height: 60px;
     width: 60px;
 }
+
+.i-user-management {
+    background: url(../img/ico/i-user-management.png);
+    height: 80px;
+    width: 80px;
+}
+
+.i-user-authorization {
+    background: url(../img/ico/i-user-authorization.png);
+    height: 80px;
+    width: 80px;
+}
+
+.i-notice {
+    background: url(../img/ico/i-notice.png);
+    height: 80px;
+    width: 80px;
+}
+
+.i-hospital-management {
+    background: url(../img/ico/i-hospital-management.png);
+    height: 80px;
+    width: 80px;
+}
+
+.i-analysis-center-management {
+    background: url(../img/ico/i-analysis-center-management.png);
+    height: 80px;
+    width: 80px;
+}
+
+.i-audit-trail {
+    background: url(../img/ico/i-audit-trail.png);
+    height: 80px;
+    width: 80px;
+}
+
+.i-common-code {
+    background: url(../img/ico/i-common-code.png);
+    height: 80px;
+    width: 80px;
+}
