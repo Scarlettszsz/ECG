@@ -664,6 +664,51 @@ function notePopup() {
                                     </button>
                                 </td>
                             </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button type="button" class="btn-del">
+                                        <i class="ico i-minus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button type="button" class="btn-del">
+                                        <i class="ico i-minus"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button type="button" class="btn-del">
+                                        <i class="ico i-minus"></i>
+                                    </button>
+                                </td>
+                            </tr>
                         </tbody>
                         <tfoot>
                             <tr>
@@ -869,7 +914,7 @@ function commonCodeAddPopup() {
                         </div>
                     </div>
                 </div>
-                <div class="table-wrap">
+                <div class="table-wrap scroll-y h-265">
                     <table class="basic-table">
                         <thead>
                             <tr>
@@ -880,6 +925,27 @@ function commonCodeAddPopup() {
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <div class="input-group sm">
+                                        <input type="text" id="text01" placeholder="Chest discomfort">
+                                    </div>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-gray">Save</button>
+                                </td>
+                                <td>
+                                    <div class="toggle-container">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" class="toggle-input">
+                                            <div class="toggle-slider">
+                                                <div class="toggle-circle"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>1</td>
                                 <td>
@@ -1037,8 +1103,8 @@ function noticePopup() {
                         <p>19/07/2020</p>
                         <h2 class="title">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis</h2>
                     </div>
-                    <div class="notice-body">
-                        adfadfadf
+                    <div class="notice-body scroll-y">
+                        adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>adfadfadfa<br>
                     </div>
                 </div>
             </div>
@@ -1171,7 +1237,7 @@ function institutionSearchPopup() {
 }
 
 function resultPopup() {
-  var popupWindow = window.open("", "_blank", "width=600,height=832");
+  var popupWindow = window.open("", "_blank", "width=600,height=760");
 
   var popupContent = `
     <!DOCTYPE html>
@@ -1191,7 +1257,7 @@ function resultPopup() {
                 <i class="ico i-x popup-close" onclick="window.close()"></i>
             </div>
             <div class="popup-body">
-                <div class="result-wrap" style="background: #ccc; height: 600px;"></div>
+            <div class="result-wrap scroll-y" style="background: #ccc;"></div>
                 <div class="pagination type3">
                     <ul>
                         <li class="prev"><a href=""><i class="ico i-arrow-left"></i></a></li>

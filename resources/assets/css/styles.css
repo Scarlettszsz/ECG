@@ -234,6 +234,7 @@
 }
 
 .report-wrap .list li {
+    cursor: pointer;
     font-size: 14px;
     font-weight: 400;
     list-style: disc;
@@ -609,4 +610,16 @@
     font-weight: 18px;
     font-weight: 400;
     margin: 12px 0 0 0;
+}
+
+/* **************************************** *
+ * ETC
+ * **************************************** */
+.h-265 {
+    max-height: 265px;
+}
+
+.result-wrap {
+    height: 600px;
+    max-height: 536px;
 }

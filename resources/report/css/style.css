@@ -1,0 +1,122 @@
+body{
+    padding-top: 0mm!important;
+}
+
+.report-page {
+    width: 210mm;
+    height: 297mm;
+    font-family: Arial, sans-serif;
+    padding: 0mm; /* 여백을 설정할 수 있습니다. */
+}
+
+/* 화면에 표시될 때의 스타일 */
+@media screen {
+    
+}
+
+/* 인쇄될 때의 스타일 */
+@media print {
+    body {
+        width: 210mm;
+        height: 297mm;
+        padding: 0mm;
+    }
+   
+    @page {
+
+        @top-left {
+          content: none;
+        }
+        @top-center {
+          content: none;
+        }
+        @top-right {
+          content: none;
+        }
+        @bottom-left {
+          content: none;
+        }
+        @bottom-center {
+          content: none;
+        }
+        @bottom-right {
+          content: none;
+        }
+    }
+}
+
+.holmes-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.holmes-basic-information{
+
+}
+
+
+.holmes-basic-information .holmes-basic-information-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 7px; */
+}
+
+.basic-information-form {
+    margin-top: 10px;
+    border: 1.5px solid #616161;
+    padding: 2px;
+}
+
+.basic-information-form table{
+    width: 100%;
+}
+
+/* Hate rate summary section */
+.holmes-heart-rate-rummary .holmes-heart-rate-summary-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 7px;
+}
+
+.heart-rate-summary-form {
+    border: 1.5px solid #616161;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+.holmes-event-summary
+.holmes-event-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 7px;
+}
+
+.event-summary-form {
+    margin-top: 10px;
+    padding: 2px;
+    border: 1.5px solid #616161;
+}
+
+
+
+
+hr { 
+    margin-top: -15px;
+    height: 5px;
+    background-color: #5D6387;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 10px;
+}

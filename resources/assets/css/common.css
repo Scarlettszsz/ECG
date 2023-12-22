@@ -673,7 +673,7 @@ button:focus {
     border-bottom: 1px solid var(--dark--border--gray--30);
     overflow-y: scroll;
     padding: 20px 24px;
-    max-height: 700px;
+    max-height: 614px;
 }
 
 .popup-body::-webkit-scrollbar {
@@ -1041,12 +1041,14 @@ button:focus {
     background: url(../img/ico/i-checkbox-disabled.png);
     background-size: cover;
     box-shadow: none;
+    opacity: 0.3;
     transition: all 0.3s ease;
 }
 
 .check-group input[type=checkbox]:disabled:checked+label::before {
     background: url(../img/ico/i-checkbox-checked-disabled.png);
     background-size: cover;
+    opacity: 0.3;
     transition: all 0.3s ease;
 }
 
@@ -1059,6 +1061,7 @@ button:focus {
 
 .check-group input[type=checkbox]:disabled+label {
     color: var(--dark--text--write--70);
+    opacity: 0.7;
 }
 
 
@@ -1115,12 +1118,14 @@ button:focus {
 .radio-group input:disabled+label::before {
     background: url(../img/ico/i-radio-disabled.png);
     background-size: cover;
+    opacity: 0.3;
     transition: all 0.3s ease;
 }
 
 .radio-group input:checked:disabled+label::before {
     background: url(../img/ico/i-radio-checked-disabled.png);
     background-size: cover;
+    opacity: 0.3;
     transition: all 0.3s ease;
 }
 
@@ -1132,6 +1137,11 @@ button:focus {
 .radio-group input:checked+label {
     color: var(--dark--text--write--100);
     transition: all 0.3s ease;
+}
+
+.radio-group input[type=radio]:disabled+label {
+    color: var(--dark--text--write--70);
+    opacity: 0.7;
 }
 
 /* textarea */
@@ -1842,7 +1852,8 @@ progress::-webkit-progress-value {
  * **************************************** */
 .pagination {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     margin: 8px 0 0 0;
 }
@@ -1889,6 +1900,7 @@ progress::-webkit-progress-value {
     align-items: center;
     display: flex;
     gap: 12px;
+    justify-content: center;
 }
 
 .pagination-num .input-group {
@@ -1922,6 +1934,11 @@ progress::-webkit-progress-value {
     color: var(--dark--text--write--50);
     font-weight: 400;
     margin: 0 0 0 4px;
+}
+
+.pagination .middle {
+    align-items: center;
+    display: flex;
 }
 
 /* **************************************** *
