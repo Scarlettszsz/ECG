@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="lib/chart.js"></script>
+</head>
+
+
+<body>
+    <div class="report-page" id="report-1">
+        <header>
+            <div class="holmes-header">
+                <h1>Holmes AIreport</h1>
+                <img src="" alt="사진" />
+            </div>
+        </header>
+        <!-- basic information  -->
+        <section>
+            <div class="table-title">
+                <h6>Heart Rate Description</h6>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <colgroup>
+                        <col style="width: 25%;">
+                        <col style="width: 25%;">
+                        <col style="width: 25%;">
+                        <col style="width: 25%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Name</th>
+                            <th>Date of birth</th>
+                            <th>Sex</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ta-cetner">1234</td>
+                            <td class="ta-cetner">1234</td>
+                            <td class="ta-cetner">1234</td>
+                            <td class="ta-cetner">1234</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <div class="table-title">
+                <h6>Heart Rate</h6>
+            </div>
+            <div class="chart-group">
+                <div class="table-chart">
+                    <div class="chart-top">
+                        <h6>Day 1 (YY-MM-DD)</h6>
+                    </div>
+                    <div class="chart-top">
+                        <h6>Heart Rate Line Plot / Hour </h6>
+                        <p>HR Max 000 BPM / HR Min 000 BPM / HR Avg. 000 BPM</p>
+                    </div>
+                    <!-- 차트 영역 -->
+                    <canvas id="myLineChart" width="400" height="120"></canvas>
+                </div>
+                <!-- chart 영역 추가 시 .table-chart 복사 후 밑으로 넣어주시면 됩니다. -->
+                <div class="table-chart">
+                    <div class="chart-top">
+                        <h6>Maximum Heart Rate / min </h6>
+                        <p>HR 000 BPM (HH:MM:SS)</p>
+                    </div>
+                    <!-- 차트 영역 -->
+                    <canvas id="progressiveLineChart" width="400" height="50"></canvas>
+                </div>
+            </div>
+
+        </section>
+        <footer id="footer">
+            <ul>
+                <li>2023-12-27</li>
+                <li>Patient name</li>
+                <li>7</li>
+            </ul>
+        </footer>
+
+    </div>
+
+</body>
+
+<script>
+    // 1시간마다 증가하는 x-축 레이블을 생성 (1월 1일)
+    const hours = Array.from({ length: 6 }, (_, index) => `${index}:00`);
+
+    // 가상의 y-축 데이터를 생성하는 함수
+    function generateRandomData(range) {
+        return Array.from({ length: 6 }, () => Math.floor(Math.random() * range));
+    }
+
+    // 가상의 y-축 데이터 생성 (범위: 0부터 6까지)
+    const yAxisData1 = generateRandomData(6);
+    // 캔버스 엘리먼트 가져오기 및 2D 렌더링 컨텍스트 생성
+    const ctx = document.getElementById('myLineChart').getContext('2d');
+
+    // 라인 차트 생성
+    const myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: hours,
+            datasets: [
+            {
+                label: 'Dataset 3',
+                data: yAxisData1,
+                borderColor: '#1466A6',
+                borderWidth: 2,
+                pointBackgroundColor: '#1466A6',
+                pointRadius: 4,
+                fill: false
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    type: 'category',
+                    position: 'bottom',
+                    ticks: {
+                        stepSize: 1,
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    max: 6
+                }
+            },
+            plugins: {
+                legend: false // label 숨김
+            },
+            font: {
+                family: 'NotoSansKR',
+            }
+        }
+    });
+
+    // Data-----
+    const combinedData = [];
+    let prev = 100;
+
+    for (let i = 0; i < 1000; i++) {
+        prev += 5 - Math.random() * 10;
+        combinedData.push({ x: i, y: prev });
+    }
+    // Data-----
+
+    // Animation-----
+    const totalDuration = 10000;
+    const delayBetweenPoints = totalDuration / combinedData.length;
+    const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
+    const animation = {
+        x: {
+            type: 'number',
+            easing: 'linear',
+            duration: delayBetweenPoints,
+            from: NaN,
+            delay(ctx) {
+                if (ctx.type !== 'data' || ctx.xStarted) {
+                    return 0;
+                }
+                ctx.xStarted = true;
+                return ctx.index * delayBetweenPoints;
+            }
+        },
+        y: {
+            type: 'number',
+            easing: 'linear',
+            duration: delayBetweenPoints,
+            from: previousY,
+            delay(ctx) {
+                if (ctx.type !== 'data' || ctx.yStarted) {
+                    return 0;
+                }
+                ctx.yStarted = true;
+                return ctx.index * delayBetweenPoints;
+            }
+        }
+    };
+    // Animation-----
+
+    // Config-----
+    const config = {
+        type: 'line',
+        data: {
+            datasets: [{
+                borderColor: "#1466A6",
+                borderWidth: 1,
+                radius: 0,
+                data: combinedData, // Use the combined data array
+            }]
+        },
+        options: {
+            animation,
+            interaction: {
+                intersect: false
+            },
+            plugins: {
+                legend: false
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    display: true, // Show x-axis
+                },
+                y: {
+                    display: false, // Hide y-axis
+                }
+            },
+            font: {
+                family: 'NotoSansKR', // Set the desired font family for the entire chart
+            }
+        }
+    };
+    // Config-----
+
+    var myChart = new Chart(
+        document.getElementById('progressiveLineChart'),
+        config
+    );
+
+</script>
+
+</html>
