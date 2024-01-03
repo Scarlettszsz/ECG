@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="lib/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-line-annotation"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+
 </head>
 
 
@@ -138,7 +142,7 @@
             </div>
             <div class="table-chart">
                 <h6>Heart Rate Summary</h6>
-                <canvas id="myLineChart" width="400" height="100"></canvas>
+                <canvas id="progressiveLineChart" width="400" height="100"></canvas>
             </div>
         </section>
         <section>
@@ -259,6 +263,22 @@
                                 </dl>
                             </td>
                         </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <colgroup>
+                        <col style="width: 45%;">
+                        <col style="width: 25%;">
+                        <col style="width: 30%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Arrhythmia Event</th>
+                            <th>Total Count</th>
+                            <th>Total Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td>
                                 <dl>
@@ -325,57 +345,40 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+        <section>
+            <div class="table-title">
+                <h6>Final Interpretation</h6>
+            </div>
+            <div class="table-wrap">
                 <table>
                     <tbody>
                         <tr>
-                            <th>ECG Findings & Interpretation</th>
+                            <th>NSR</th>
                         </tr>
                         <tr>
-                            <td class="va-top">
-                                baseline rhythm; mainly sinus rhythm
-                                rare VPBs with up to rare VE couplets
-                                rare SVEs with rare SVE runs
-                                SVE run longest at 23-07-12 01:42:38 ~ 01:42:39
-                                tachycardia counts; mostly sinus tachycardia
-                                bradycardia episodes; mostly sinus bradycardia
-                                max RR; 1.48 secs 07-09 05:59:19 - long RR interval with sinus arrhythmia
-                                AT note/nearby AT note - nonspecific or isolated SVE, interpolated VPC
-                                no significant pause or block
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Final Interpretation</th>
-                        </tr>
-                        <tr>
-                            <td class="va-top">
-                                <div class="nsr">
-                                    <h1>NSR</h1>
-                                    <table class="nsr-table">
-                                        <thead>
-                                            <tr>
-                                                <th colspan="2">Approval Signature</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="ta-cetner">Technician</td>
-                                                <td class="ta-cetner">Physician</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="ta-cetner">
-                                                    <img src="" alt="">
-                                                </td>
-                                                <td class="ta-cetner">
-                                                    <img src="" alt="">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="ta-cetner">크리스티아누 호날두 2022-02-12 14:20:21</td>
-                                                <td class="ta-cetner">크리스티아누 호날두 2022-02-12 14:20:21</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <td class="p-none">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="ta-cetner">Technician</td>
+                                            <td class="ta-cetner">Physician</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ta-cetner">
+                                                <img src="" alt="">
+                                            </td>
+                                            <td class="ta-cetner">
+                                                <img src="" alt="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ta-cetner">크리스티아누 호날두 2022-02-12 14:20:21</td>
+                                            <td class="ta-cetner">크리스티아누 호날두 2022-02-12 14:20:21</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </td>
                         </tr>
                     </tbody>
@@ -391,81 +394,136 @@
         </footer>
 
     </div>
+    </class>
 
 </body>
 
 <script>
-    // 1시간마다 증가하는 x-축 레이블을 생성 (1월 1일)
-    const hours = Array.from({ length: 6 }, (_, index) => `${index}:00`);
+    const combinedData = [];
+    let prev = 60;
 
-    // 가상의 y-축 데이터를 생성하는 함수
-    function generateRandomData(range) {
-        return Array.from({ length: 6 }, () => Math.floor(Math.random() * range));
+    for (let i = 0; i < 250; i++) {
+        prev += 5 - Math.random() * 10;
+        combinedData.push({ x: i, y: prev });
+    }
+    // Data-----
+
+    const additionalData1 = [];
+    let prev1 = 160;
+
+    for (let i = 0; i < 250; i++) {
+        prev1 += 5 - Math.random() * 10;
+        additionalData1.push({ x: i, y: prev1 });
     }
 
-    // 가상의 y-축 데이터 생성 (범위: 0부터 6까지)
-    const yAxisData1 = generateRandomData(6);
-    const yAxisData2 = generateRandomData(6);
-    const yAxisData3 = generateRandomData(6);
+    const additionalData2 = [];
+    let prev2 = 90;
 
-    // 캔버스 엘리먼트 가져오기 및 2D 렌더링 컨텍스트 생성
-    const ctx = document.getElementById('myLineChart').getContext('2d');
+    for (let i = 0; i < 250; i++) {
+        prev2 += 5 - Math.random() * 10;
+        additionalData2.push({ x: i, y: prev2 });
+    }
 
-    // 라인 차트 생성
-    const myLineChart = new Chart(ctx, {
+    const totalDuration = 10000;
+    const delayBetweenPoints = totalDuration / combinedData.length;
+    const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
+    const animation = {
+        x: {
+            type: 'number',
+            easing: 'linear',
+            duration: 0, // Set duration to 0 to remove animation
+            from: NaN,
+            delay(ctx) {
+                if (ctx.type !== 'data' || ctx.xStarted) {
+                    return 0;
+                }
+                ctx.xStarted = true;
+                return ctx.index * delayBetweenPoints;
+            }
+        },
+        y: {
+            type: 'number',
+            easing: 'linear',
+            duration: 0, // Set duration to 0 to remove animation
+            from: previousY,
+            delay(ctx) {
+                if (ctx.type !== 'data' || ctx.yStarted) {
+                    return 0;
+                }
+                ctx.yStarted = true;
+                return ctx.index * delayBetweenPoints;
+            }
+        }
+    };
+    // Animation-----
+
+    // Config-----
+    const config = {
         type: 'line',
         data: {
-            labels: hours,
-            datasets: [{
-                label: 'Dataset 1',
-                data: yAxisData1,
-                borderColor: '#AA2626',
-                borderWidth: 2,
-                pointBackgroundColor: '#AA2626',
-                pointRadius: 4,
-                fill: false
-            },
-            {
-                label: 'Dataset 2',
-                data: yAxisData2,
-                borderColor: '#EC7C31',
-                borderWidth: 2,
-                pointBackgroundColor: '#EC7C31',
-                pointRadius: 4,
-                fill: false
-            },
-            {
-                label: 'Dataset 3',
-                data: yAxisData3,
-                borderColor: '#1466A6',
-                borderWidth: 2,
-                pointBackgroundColor: '#1466A6',
-                pointRadius: 4,
-                fill: false
-            }]
+            datasets: [
+                {
+                    label: 'Min',
+                    borderColor: "#01b74b",
+                    borderWidth: 1,
+                    radius: 0,
+                    data: combinedData,
+                },
+                {
+                    label: 'Max',
+                    borderColor: "#FF0000",
+                    borderWidth: 1,
+                    radius: 0,
+                    data: additionalData1,
+                },
+                {
+                    label: 'Avg',
+                    borderColor: "#666666",
+                    borderWidth: 1,
+                    radius: 0,
+                    data: additionalData2,
+                }
+            ]
         },
         options: {
+            animation,
+            interaction: {
+                intersect: false
+            },
+            plugins: {
+                legend: {
+                    display: false,
+                    position: 'top'
+                }
+            },
             scales: {
                 x: {
-                    type: 'category', 
-                    position: 'bottom',
+                    type: 'linear',
+                    display: true, // Show x-axis
                     ticks: {
-                        stepSize: 1,
+                        callback: function (value, index, values) {
+                            return moment(value, 'X').format('MM-DD');
+                        },
+                        maxTicksLimit: 14,
                     }
                 },
                 y: {
-                    beginAtZero: true,
-                    max: 6
+                    display: true, // Show y-axis
+                    min: 0,       // Set the minimum value for the y-axis
+                    max: 250
                 }
             },
-            plugins: {
-                legend: false // label 숨김
-            },
             font: {
-                family: 'NotoSansKR', 
+                family: 'NotoSansKR', // Set the desired font family for the entire chart
             }
         }
-    });
+    };
+    // Config-----
+
+    var myChart = new Chart(
+        document.getElementById('progressiveLineChart'),
+        config
+    );
 </script>
 
 </html>

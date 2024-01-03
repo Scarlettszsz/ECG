@@ -167,7 +167,9 @@
                             Date of Onset YY-MM-DD HH:MM:SS</p>
                     </div>
                     <!-- 차트 영역 -->
-                    <canvas id="progressiveLineChart" width="400" height="50"></canvas>
+                    <div class="chart-container">
+                        <canvas id="progressiveLineChart" width="777" height="100"></canvas>
+                    </div>
                 </div>
                 <!-- chart 영역 추가 시 .table-chart 복사 후 밑으로 넣어주시면 됩니다. -->
             </div>
@@ -253,7 +255,7 @@
             scales: {
                 x: {
                     type: 'linear',
-                    display: true, // Show x-axis
+                    display: false, // Show x-axis
                 },
                 y: {
                     display: false, // Hide y-axis

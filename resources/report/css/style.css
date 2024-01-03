@@ -85,41 +85,42 @@ table {
 }
 
 thead tr th {
-    background: #f1f1f1;
+    background: #eff3f5;
     border-bottom: 1px solid #ccc;
     color: #000;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 500;
-    padding: 6px 8px;
+    padding: 4px 8px;
 }
 
 tbody tr td {
     border-bottom: 1px solid #ccc;
     color: #444;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 400;
-    padding: 6px 8px;
+    padding: 4px 8px;
 }
 
 tbody tr th {
-    background: #f1f1f1;
+    background: #eff3f5;
     border-bottom: 1px solid #ccc;
     color: #000;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 500;
-    padding: 6px 8px;
+    padding: 4px 8px;
     text-align: left;
 }
 
 .holmes-header {
     align-items: center;
-    border-bottom: 4px solid #000;
+    border-bottom: 4px solid #1466A6;
     display: flex;
     justify-content: space-between;
     padding: 0 0 8px 0;
 }
 
 .holmes-header h1 {
+    color: #1466A6;
     font-size: 24px;
     margin: 0;
 }
@@ -129,7 +130,7 @@ tbody tr th {
 }
 
 .table-title {
-    background: #000;
+    background: #1466A6;
     padding: 8px;
 }
 
@@ -167,9 +168,17 @@ tbody tr th {
 }
 
 .chart-top p {
-    font-size: 8px;
+    font-size: 10px;
     margin: 0 0 0 auto;
     text-align: right;
+}
+
+.chart-container {
+    background-image: url(../img/sample.jpg);
+    background-size: cover; 
+    height: 100px;
+    position: relative;
+    width: 100%;
 }
 
 dl {
@@ -218,8 +227,12 @@ dd {
     max-width: 88px;
 }
 
+.p-none {
+    padding: 0 !important;
+}
+
 #footer {
-    background: #000;
+    background: #333;
     margin: auto 0 0 0;
     padding: 8px;
 }
