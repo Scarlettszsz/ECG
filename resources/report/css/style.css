@@ -29,6 +29,7 @@ body {
 
 
 .report-page {
+    box-sizing: border-box;
     width: 210mm;
     height: 297mm;
     font-family: 'NotoSansKR', sans-serif;
@@ -130,8 +131,13 @@ tbody tr th {
 }
 
 .table-title {
+    align-items: center;
     background: #1466A6;
-    padding: 8px;
+    display: flex;
+    height: 30px;
+    padding: 0 8px;
+    position: relative;
+    z-index: 1;
 }
 
 .table-title h6 {
